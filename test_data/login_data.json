@@ -1,0 +1,48 @@
+{
+    "valid_users": [
+      {
+        "username": "standard_user",
+        "password": "secret_sauce",
+        "expected_url": "inventory",
+        "test_id": "standard_user"
+      },
+      {
+        "username": "problem_user",
+        "password": "secret_sauce",
+        "expected_url": "inventory",
+        "test_id": "problem_user"
+      },
+      {
+        "username": "performance_glitch_user",
+        "password": "secret_sauce",
+        "expected_url": "inventory",
+        "test_id": "performance_glitch_user"
+      }
+    ],
+    "invalid_users": [
+      {
+        "username": "locked_out_user",
+        "password": "secret_sauce",
+        "expected_error": "Sorry, this user has been locked out",
+        "test_id": "locked_out_user"
+      },
+      {
+        "username": "wrong_user",
+        "password": "wrong_pass",
+        "expected_error": "Epic sadface",
+        "test_id": "wrong_credentials"
+      },
+      {
+        "username": "",
+        "password": "",
+        "expected_error": "Username is required",
+        "test_id": "empty_credentials"
+      },
+      {
+        "username": "standard_user",
+        "password": "",
+        "expected_error": "Password is required",
+        "test_id": "empty_password"
+      }
+    ]
+  }
