@@ -19,3 +19,6 @@ class LoginPage:
 
     def get_error_message(self):
         return self.page.locator(self.error_message).text_content()
+    
+
+   
