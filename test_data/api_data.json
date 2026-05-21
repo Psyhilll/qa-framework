@@ -1,0 +1,29 @@
+{
+    "valid_user_ids": [
+      { "user_id": 1, "test_id": "user_1" },
+      { "user_id": 5, "test_id": "user_5" },
+      { "user_id": 10, "test_id": "user_10" }
+    ],
+    "invalid_user_ids": [
+      { "user_id": 9999, "test_id": "nonexistent_user" },
+      { "user_id": 0, "test_id": "zero_id" }
+    ],
+    "new_posts": [
+      {
+        "title": "Test Post One",
+        "body": "This is the body of test post one",
+        "userId": 1,
+        "test_id": "post_by_user_1"
+      },
+      {
+        "title": "Test Post Two",
+        "body": "This is the body of test post two",
+        "userId": 2,
+        "test_id": "post_by_user_2"
+      }
+    ],
+    "valid_post_ids": [
+      { "post_id": 1, "test_id": "delete_post_1" },
+      { "post_id": 50, "test_id": "delete_post_50" }
+    ]
+  }
