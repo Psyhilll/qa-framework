@@ -1,0 +1,44 @@
+{
+    "sort_options": [
+      { "option": "az", "value": "az", "test_id": "sort_a_to_z" },
+      { "option": "za", "value": "za", "test_id": "sort_z_to_a" },
+      { "option": "lohi", "value": "lohi", "test_id": "sort_price_low_high" },
+      { "option": "hilo", "value": "hilo", "test_id": "sort_price_high_low" }
+    ],
+    "products": [
+      { "name": "Sauce Labs Backpack", "test_id": "backpack" },
+      { "name": "Sauce Labs Bike Light", "test_id": "bike_light" },
+      { "name": "Sauce Labs Bolt T-Shirt", "test_id": "bolt_tshirt" }
+    ],
+    "checkout_users": [
+      {
+        "first_name": "John",
+        "last_name": "Doe",
+        "zip": "12345",
+        "test_id": "valid_checkout_user"
+      }
+    ],
+    "invalid_checkout_users": [
+      {
+        "first_name": "",
+        "last_name": "Doe",
+        "zip": "12345",
+        "expected_error": "First Name is required",
+        "test_id": "missing_first_name"
+      },
+      {
+        "first_name": "John",
+        "last_name": "",
+        "zip": "12345",
+        "expected_error": "Last Name is required",
+        "test_id": "missing_last_name"
+      },
+      {
+        "first_name": "John",
+        "last_name": "Doe",
+        "zip": "",
+        "expected_error": "Postal Code is required",
+        "test_id": "missing_zip"
+      }
+    ]
+  }

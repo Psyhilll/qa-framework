@@ -59,3 +59,46 @@ def get_valid_post_ids():
         pytest.param(entry["post_id"], id=entry["test_id"])
         for entry in data["valid_post_ids"]
     ]
+def load_ui_data():
+    data_path = os.path.join(os.path.dirname(__file__), "..", "test_data", "ui_data.json")
+    with open(data_path, "r") as f:
+        return json.load(f)
+
+
+def get_sort_options():
+    data = load_ui_data()
+    return [
+        pytest.param(entry["value"], id=entry["test_id"])
+        for entry in data["sort_options"]
+    ]
+
+
+def get_products():
+    data = load_ui_data()
+    return [
+        pytest.param(entry["name"], id=entry["test_id"])
+        for entry in data["products"]
+    ]
+
+
+def get_checkout_users():
+    data = load_ui_data()
+    return [
+        pytest.param(
+            entry["first_name"], entry["last_name"], entry["zip"],
+            id=entry["test_id"]
+        )
+        for entry in data["checkout_users"]
+    ]
+
+
+def get_invalid_checkout_users():
+    data = load_ui_data()
+    return [
+        pytest.param(
+            entry["first_name"], entry["last_name"], entry["zip"],
+            entry["expected_error"],
+            id=entry["test_id"]
+        )
+        for entry in data["invalid_checkout_users"]
+    ]
